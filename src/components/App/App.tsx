@@ -41,7 +41,6 @@ export default function App() {
         setLoader(true);
 
         const response = await getPhotos(searchWord);
-
         if (response.length === 0) {
           return toast.error("No movies found for your request.");
         }

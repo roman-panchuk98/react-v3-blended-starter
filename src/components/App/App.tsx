@@ -65,7 +65,7 @@ export default function App() {
           <Toaster />
           {loader && <Loader />}
           {error && (
-            <Text textAlign="center" marginBottom="20">
+            <Text>
               <ErrorMessage />
             </Text>
           )}

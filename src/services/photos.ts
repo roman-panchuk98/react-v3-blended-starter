@@ -2,8 +2,7 @@ import axios from "axios";
 import type { Photo } from "../types/photo";
 
 axios.defaults.baseURL = "https://api.pexels.com/v1/";
-axios.defaults.headers.common["Authorization"] =
-  import.meta.env.VITE_PIXELS_API_KEY;
+axios.defaults.headers.common["Authorization"] = import.meta.env.PIXELS_API_KEY;
 axios.defaults.params = {
   orientation: "landscape",
 };

@@ -1,17 +1,45 @@
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { Post } from "../../types/post";
 import css from "./PostList.module.css";
+import { deletePost } from "../../services/postService";
+import toast from "react-hot-toast";
 
-export default function PostList() {
+interface PostListProps {
+  posts: Post[];
+}
+
+export default function PostList({ posts }: PostListProps) {
+  const queryClient = useQueryClient();
+
+  const mutationDelete = useMutation({
+    mutationFn: async (id: number) => {
+      const res = await deletePost(id);
+      return res;
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["myPosts"] });
+      toast.success("You post has been deleted");
+    },
+  });
+
+  const handleDeleteNote = (id: number) => {
+    mutationDelete.mutate(id);
+  };
+
   return (
     <ul className={css.list}>
-      {/* список постів, кожен з яких створює наступну розмітку */}
-      <li className={css.listItem}>
-        <h2 className={css.title}>Title</h2>
-        <p className={css.content}>Контент</p>
-        <div className={css.footer}>
-          <button className={css.edit}>Edit</button>
-          <button className={css.delete}>Delete</button>
-        </div>
-      </li>
+      {posts.map((el) => (
+        <li className={css.listItem} key={el.id}>
+          <h2 className={css.title}>{el.title}</h2>
+          <p className={css.content}>{el.body}</p>
+          <div className={css.footer}>
+            <button className={css.edit}>Edit</button>
+            <button className={css.delete} onClick={() => handleDeleteNote(el.id)}>
+              Delete
+            </button>
+          </div>
+        </li>
+      ))}
     </ul>
   );
 }

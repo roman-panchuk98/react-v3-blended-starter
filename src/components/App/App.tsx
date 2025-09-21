@@ -20,7 +20,6 @@ export default function App() {
 
   const handleChange = useDebouncedCallback((event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchWord(event.target.value);
-
     setCurrentPage(1);
   }, 300);
 

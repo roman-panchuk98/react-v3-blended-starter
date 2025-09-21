@@ -15,8 +15,8 @@ export default function App() {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [searchWord, setSearchWord] = useState<string>("");
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-  const [isCreatePost, setIsCreatePost] = useState();
-  const [isEditPost, setIsEditPost] = useState();
+  // const [isCreatePost, setIsCreatePost] = useState();
+  // const [isEditPost, setIsEditPost] = useState();
 
   const handleChange = useDebouncedCallback((event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchWord(event.target.value);

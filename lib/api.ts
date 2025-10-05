@@ -18,6 +18,7 @@ export const fetchPosts = async ({
   const response = await axios.get<FetchPostsResponse>('/posts', {
     params: {
       userId,
+
       ...(searchText !== '' && { q: searchText }),
       _page: page,
       _limit: 8,

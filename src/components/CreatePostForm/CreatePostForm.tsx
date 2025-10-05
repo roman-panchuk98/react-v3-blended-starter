@@ -37,7 +37,7 @@ export default function PostForm({ onClose }: PostFormProps) {
       return res;
     },
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ["myNoteHubKey"] });
+      queryClient.invalidateQueries({ queryKey: ["myPosts"] });
       toast.success("Post created successfully!");
     },
   });

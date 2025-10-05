@@ -21,6 +21,7 @@ export const fetchPosts = async ({
 
       ...(searchText !== '' && { q: searchText }),
       _page: page,
+
       _limit: 8,
     },
   });

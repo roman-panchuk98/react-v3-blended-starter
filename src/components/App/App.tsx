@@ -46,8 +46,8 @@ export default function App() {
   };
 
   const handleOpenEdit = (post: Post) => {
-    setSelectedPost(post); // зберігаємо пост, який хочемо редагувати
-    setIsEditOpen(true); // відкриваємо модалку
+    setSelectedPost(post);
+    setIsEditOpen(true);
   };
   const handleCloseEdit = () => {
     setIsEditOpen(false);

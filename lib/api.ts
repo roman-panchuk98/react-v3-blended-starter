@@ -18,10 +18,8 @@ export const fetchPosts = async ({
   const response = await axios.get<FetchPostsResponse>('/posts', {
     params: {
       userId,
-
       ...(searchText !== '' && { q: searchText }),
       _page: page,
-
       _limit: 8,
     },
   });
@@ -55,8 +53,17 @@ export const deletePost = async (postId: number) => {
   return response.data;
 };
 
-export const fetchPostById = async () => {};
+export const fetchPostById = async (postId: number): Promise<Post> => {
+  const response = await axios.get<Post>(`/post/${postId}`);
+  return response.data;
+};
 
-export const fetchUsers = async () => {};
+export const fetchUsers = async (): Promise<User[]> => {
+  const response = await axios.get<User[]>('/users');
+  return response.data;
+};
 
-export const fetchUserById = async () => {};
+export const fetchUserById = async (userId: number): Promise<User> => {
+  const response = await axios.get<User>(`/users/${userId}`);
+  return response.data;
+};

@@ -6,10 +6,10 @@ export default function Footer() {
       <div className={css.content}>
         <p className={css.text}>© {new Date().getFullYear()} Postly. All rights reserved.</p>
         <div className={css.wrap}>
-          <p className={css.text}>Developer: GoIT student</p>
+          <p className={css.text}>Developer: Roman Panchuk</p>
           <p className={css.text}>
             Contact us: &nbsp;
-            <a href="mailto:student@postly.app">student@postly.app</a>
+            <a href="mailto:student@postly.app">roman.panchuk98@gmail.com</a>
           </p>
         </div>
       </div>

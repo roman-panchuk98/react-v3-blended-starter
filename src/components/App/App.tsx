@@ -11,13 +11,14 @@ import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { useDebouncedCallback } from "use-debounce";
 import toast from "react-hot-toast";
 import EditPostForm from "../EditPostForm/EditPostForm";
+import { Post } from "../../types/post";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [searchWord, setSearchWord] = useState<string>("");
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [isEditPost, setIsEditOpen] = useState<boolean>(false);
-  const [selectedPost, setSelectedPost] = useState(null);
+  const [selectedPost, setSelectedPost] = useState<Post | null>(null);
 
   const handleChange = useDebouncedCallback((event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchWord(event.target.value);
@@ -44,7 +45,7 @@ export default function App() {
     setIsModalOpen(false);
   };
 
-  const handleOpenEdit = (post) => {
+  const handleOpenEdit = (post: Post) => {
     setSelectedPost(post); // зберігаємо пост, який хочемо редагувати
     setIsEditOpen(true); // відкриваємо модалку
   };

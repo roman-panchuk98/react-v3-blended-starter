@@ -1,0 +1,74 @@
+/* [project]/components/UsersMenu/UsersMenu.module.css [app-client] (css) */
+.UsersMenu-module__H8Z09a__menuContainer {
+  z-index: 1000;
+  display: inline-block;
+  position: relative;
+}
+
+.UsersMenu-module__H8Z09a__menuButton {
+  color: #fff;
+  cursor: pointer;
+  background-color: #0000;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  padding: 0 8px 0 24px;
+  font-family: Open Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: flex;
+}
+
+.UsersMenu-module__H8Z09a__menuButton:hover {
+  background-color: #368a01;
+}
+
+.UsersMenu-module__H8Z09a__arrow {
+  background-image: url("/arrow.svg");
+  width: 44px;
+  height: 44px;
+}
+
+.UsersMenu-module__H8Z09a__menuList {
+  z-index: 1001;
+  backdrop-filter: blur(25px);
+  background: #ffffff40;
+  border: 1px solid #f5f5f5;
+  border-radius: 8px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 0;
+  display: flex;
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
+
+.UsersMenu-module__H8Z09a__menuItem {
+  width: 100%;
+  margin: 0;
+}
+
+.UsersMenu-module__H8Z09a__menuLink {
+  color: #fff;
+  padding: 4px 12px;
+  font-family: Open Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: block;
+}
+
+.UsersMenu-module__H8Z09a__menuLink:hover {
+  background-color: #368a01;
+}
+
+/*# sourceMappingURL=components_UsersMenu_UsersMenu_module_css_f9ee138c._.single.css.map*/

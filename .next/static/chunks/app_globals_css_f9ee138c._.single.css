@@ -1,0 +1,28 @@
+/* [project]/app/globals.css [app-client] (css) */
+body {
+  background-image: url("/Home.png");
+  background-position: center;
+  background-size: cover;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Open Sans, sans-serif;
+  display: flex;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/*# sourceMappingURL=app_globals_css_f9ee138c._.single.css.map*/

@@ -13,9 +13,10 @@ interface CreatePostProps {
   body: string;
 }
 
-interface EditPostProps {
-  post: CreatePostProps;
+export interface EditPostProps {
   id: number;
+  title: string;
+  body: string;
 }
 
 export const fetchPosts = async (searchText: string, page: number): Promise<PostHttpResponse> => {
@@ -38,8 +39,9 @@ export const createPost = async (newPost: CreatePostProps): Promise<Post> => {
   return postResponse.data;
 };
 
-export const editPost = async ({ post, id }: EditPostProps): Promise<Post> => {
-  const editResponse = await axios.patch("" + id, post);
+export const editPost = async ({ title, body, id }: EditPostProps): Promise<Post> => {
+  const editResponse = await axios.patch("" + id, { title, body });
+  console.log(editResponse.data);
 
   return editResponse.data;
 };

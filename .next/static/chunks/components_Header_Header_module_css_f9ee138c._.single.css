@@ -1,0 +1,63 @@
+/* [project]/components/Header/Header.module.css [app-client] (css) */
+.Header-module__arFiJq__header {
+  backdrop-filter: blur(25px);
+  background: #ffffff40;
+  border-bottom: 1px solid #368a01;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  padding: 0 43px;
+  display: flex;
+}
+
+.Header-module__arFiJq__headerContainer {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 43px;
+  display: flex;
+}
+
+.Header-module__arFiJq__headerLink {
+  color: #368a01;
+  text-shadow: 0 4px 4px #00000040;
+  font-family: Knewave;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.Header-module__arFiJq__navigation {
+  gap: 48px;
+  display: flex;
+}
+
+.Header-module__arFiJq__navigationItem {
+  align-items: center;
+  display: flex;
+}
+
+.Header-module__arFiJq__navigationLink {
+  color: #fff;
+  cursor: pointer;
+  background-color: #0000;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  padding: 8px 24px;
+  font-family: Open Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: flex;
+}
+
+.Header-module__arFiJq__navigationLink:hover {
+  background-color: #368a01;
+}
+
+/*# sourceMappingURL=components_Header_Header_module_css_f9ee138c._.single.css.map*/

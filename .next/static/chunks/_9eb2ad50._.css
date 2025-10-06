@@ -1,0 +1,303 @@
+@import "https://fonts.googleapis.com/css2?family=Knewave&family=Open+Sans&display=swap";
+/* [project]/components/Header/Header.module.css [app-client] (css) */
+.Header-module__arFiJq__header {
+  backdrop-filter: blur(25px);
+  background: #ffffff40;
+  border-bottom: 1px solid #368a01;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  padding: 0 43px;
+  display: flex;
+}
+
+.Header-module__arFiJq__headerContainer {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 43px;
+  display: flex;
+}
+
+.Header-module__arFiJq__headerLink {
+  color: #368a01;
+  text-shadow: 0 4px 4px #00000040;
+  font-family: Knewave;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.Header-module__arFiJq__navigation {
+  gap: 48px;
+  display: flex;
+}
+
+.Header-module__arFiJq__navigationItem {
+  align-items: center;
+  display: flex;
+}
+
+.Header-module__arFiJq__navigationLink {
+  color: #fff;
+  cursor: pointer;
+  background-color: #0000;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  padding: 8px 24px;
+  font-family: Open Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: flex;
+}
+
+.Header-module__arFiJq__navigationLink:hover {
+  background-color: #368a01;
+}
+
+
+/* [project]/components/UsersMenu/UsersMenu.module.css [app-client] (css) */
+.UsersMenu-module__H8Z09a__menuContainer {
+  z-index: 1000;
+  display: inline-block;
+  position: relative;
+}
+
+.UsersMenu-module__H8Z09a__menuButton {
+  color: #fff;
+  cursor: pointer;
+  background-color: #0000;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  padding: 0 8px 0 24px;
+  font-family: Open Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: flex;
+}
+
+.UsersMenu-module__H8Z09a__menuButton:hover {
+  background-color: #368a01;
+}
+
+.UsersMenu-module__H8Z09a__arrow {
+  background-image: url("/arrow.svg");
+  width: 44px;
+  height: 44px;
+}
+
+.UsersMenu-module__H8Z09a__menuList {
+  z-index: 1001;
+  backdrop-filter: blur(25px);
+  background: #ffffff40;
+  border: 1px solid #f5f5f5;
+  border-radius: 8px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 0;
+  display: flex;
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
+
+.UsersMenu-module__H8Z09a__menuItem {
+  width: 100%;
+  margin: 0;
+}
+
+.UsersMenu-module__H8Z09a__menuLink {
+  color: #fff;
+  padding: 4px 12px;
+  font-family: Open Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: block;
+}
+
+.UsersMenu-module__H8Z09a__menuLink:hover {
+  background-color: #368a01;
+}
+
+
+/* [project]/components/Footer/Footer.module.css [app-client] (css) */
+.Footer-module__rnk_JG__footer {
+  background: #363638;
+  border-top: 1px solid #368a01;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 0;
+  display: flex;
+}
+
+.Footer-module__rnk_JG__wrap {
+  justify-content: center;
+  align-items: flex-start;
+  gap: 48px;
+  display: flex;
+}
+
+.Footer-module__rnk_JG__content {
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  display: flex;
+}
+
+.Footer-module__rnk_JG__text {
+  color: #fff;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.Footer-module__rnk_JG__footer a {
+  color: #368a01;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.Footer-module__rnk_JG__footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* [project]/node_modules/modern-normalize/modern-normalize.css [app-client] (css) */
+*, :before, :after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  tab-size: 4;
+  font-family: system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  line-height: 1.15;
+}
+
+body {
+  margin: 0;
+}
+
+b, strong {
+  font-weight: bolder;
+}
+
+code, kbd, samp, pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+sup {
+  top: -.5em;
+}
+
+table {
+  border-color: currentColor;
+}
+
+button, input, optgroup, select, textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+}
+
+button, [type="button"], [type="reset"], [type="submit"] {
+  -webkit-appearance: button;
+}
+
+legend {
+  padding: 0;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+summary {
+  display: list-item;
+}
+
+
+/* [project]/app/globals.css [app-client] (css) */
+body {
+  background-image: url("/Home.png");
+  background-position: center;
+  background-size: cover;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Open Sans, sans-serif;
+  display: flex;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+/*# sourceMappingURL=_9eb2ad50._.css.map*/

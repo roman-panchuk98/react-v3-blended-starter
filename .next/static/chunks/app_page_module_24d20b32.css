@@ -1,0 +1,39 @@
+/* [project]/app/page.module.css [app-client] (css) */
+.page-module__E0kJGG__main {
+  flex-direction: column;
+  flex: 1 0 0;
+  align-items: flex-start;
+  width: 100%;
+  display: flex;
+}
+
+.page-module__E0kJGG__container {
+  flex-direction: column;
+  flex: 1 0 0;
+  align-items: flex-start;
+  gap: 40px;
+  width: 700px;
+  padding: 40px 0 80px 80px;
+  display: flex;
+}
+
+.page-module__E0kJGG__title {
+  color: #fff;
+  font-family: Knewave;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.page-module__E0kJGG__description {
+  color: #fff;
+  font-family: Open Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+
+/*# sourceMappingURL=app_page_module_24d20b32.css.map*/

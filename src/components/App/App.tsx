@@ -1,22 +1,23 @@
+import css from "./App.module.css";
 import Modal from "../Modal/Modal";
 import PostList from "../PostList/PostList";
 import SearchBox from "../SearchBox/SearchBox";
 import Pagination from "../Pagination/Pagination";
+import PostForm from "../CreatePostForm/CreatePostForm";
+import { fetchPosts } from "../../services/postService";
 
-import css from "./App.module.css";
 import { useEffect, useState } from "react";
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
-import { fetchPosts } from "../../services/postService";
-import toast, { Toaster } from "react-hot-toast";
 import { useDebouncedCallback } from "use-debounce";
-import PostForm from "../CreatePostForm/CreatePostForm";
+import toast from "react-hot-toast";
+import EditPostForm from "../EditPostForm/EditPostForm";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [searchWord, setSearchWord] = useState<string>("");
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-  // const [isCreatePost, setIsCreatePost] = useState();
-  // const [isEditPost, setIsEditPost] = useState();
+  const [isEditPost, setIsEditOpen] = useState<boolean>(false);
+  const [selectedPost, setSelectedPost] = useState(null);
 
   const handleChange = useDebouncedCallback((event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchWord(event.target.value);
@@ -38,15 +39,24 @@ export default function App() {
   const handleOpenModal = () => {
     setIsModalOpen(true);
   };
+
   const handleCloseModal = () => {
     setIsModalOpen(false);
+  };
+
+  const handleOpenEdit = (post) => {
+    setSelectedPost(post); // зберігаємо пост, який хочемо редагувати
+    setIsEditOpen(true); // відкриваємо модалку
+  };
+  const handleCloseEdit = () => {
+    setIsEditOpen(false);
   };
 
   return (
     <div className={css.app}>
       <header className={css.toolbar}>
         <SearchBox value={searchWord} onSearch={handleChange} />
-        <Toaster />
+
         {data && data.posts.length > 1 && (
           <Pagination
             totalPages={data?.totalPosts ?? 0}
@@ -63,7 +73,14 @@ export default function App() {
           <PostForm onClose={handleCloseModal} />
         </Modal>
       )}
-      {data && data?.posts.length > 0 && <PostList posts={data.posts} />}
+      {isEditPost && selectedPost && (
+        <Modal onClose={handleCloseEdit}>
+          <EditPostForm onClose={handleCloseEdit} post={selectedPost} />
+        </Modal>
+      )}
+      {data && data?.posts.length > 0 && (
+        <PostList posts={data.posts} isOpenEdit={handleOpenEdit} />
+      )}
     </div>
   );
 }

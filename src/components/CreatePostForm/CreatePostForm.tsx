@@ -11,7 +11,7 @@ export interface PostFormValuesProps {
   body: string;
 }
 
-interface PostFormProps {
+export interface PostFormProps {
   onClose: () => void;
 }
 
@@ -20,7 +20,7 @@ const initialValues: PostFormValuesProps = {
   body: "",
 };
 
-const OrderFormSchema = Yup.object().shape({
+export const OrderFormSchema = Yup.object().shape({
   title: Yup.string()
     .min(3, "Name must be at least 3 characters")
     .max(50, "Name is too long")

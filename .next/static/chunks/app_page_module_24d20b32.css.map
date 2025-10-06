@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/panch/ProjectsGoIT/Blended/TYPESCRIPT%20%2B%20REACT/react-v3-blended-starter/app/page.module.css"],"sourcesContent":[".main {\r\n  display: flex;\r\n  width: 100%;\r\n  flex-direction: column;\r\n  align-items: flex-start;\r\n  flex: 1 0 0;\r\n}\r\n\r\n.container {\r\n  display: flex;\r\n  width: 700px;\r\n  padding: 40px 0px 80px 80px;\r\n  flex-direction: column;\r\n  align-items: flex-start;\r\n  gap: 40px;\r\n  flex: 1 0 0;\r\n}\r\n\r\n.title {\r\n  color: #ffffff;\r\n  font-family: Knewave;\r\n  font-size: 64px;\r\n  font-style: normal;\r\n  font-weight: 400;\r\n  line-height: normal;\r\n}\r\n\r\n.description {\r\n  color: #fff;\r\n  font-family: 'Open Sans';\r\n  font-size: 18px;\r\n  font-style: normal;\r\n  font-weight: 400;\r\n  line-height: normal;\r\n}\r\n"],"names":[],"mappings":"AAAA;;;;;;;;AAQA;;;;;;;;;;AAUA;;;;;;;;;AASA","debugId":null}}]
+}

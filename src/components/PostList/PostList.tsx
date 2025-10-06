@@ -6,11 +6,11 @@ import toast from "react-hot-toast";
 
 interface PostListProps {
   posts: Post[];
+  isOpenEdit: (post: Post) => void;
 }
 
-export default function PostList({ posts }: PostListProps) {
+export default function PostList({ posts, isOpenEdit }: PostListProps) {
   const queryClient = useQueryClient();
-
   const mutationDelete = useMutation({
     mutationFn: async (id: number) => {
       const res = await deletePost(id);
@@ -33,7 +33,9 @@ export default function PostList({ posts }: PostListProps) {
           <h2 className={css.title}>{el.title}</h2>
           <p className={css.content}>{el.body}</p>
           <div className={css.footer}>
-            <button className={css.edit}>Edit</button>
+            <button className={css.edit} onClick={() => isOpenEdit(el)}>
+              Edit
+            </button>
             <button className={css.delete} onClick={() => handleDeleteNote(el.id)}>
               Delete
             </button>

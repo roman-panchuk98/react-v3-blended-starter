@@ -1,0 +1,46 @@
+/* [project]/components/Footer/Footer.module.css [app-client] (css) */
+.Footer-module__rnk_JG__footer {
+  background: #363638;
+  border-top: 1px solid #368a01;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 0;
+  display: flex;
+}
+
+.Footer-module__rnk_JG__wrap {
+  justify-content: center;
+  align-items: flex-start;
+  gap: 48px;
+  display: flex;
+}
+
+.Footer-module__rnk_JG__content {
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  display: flex;
+}
+
+.Footer-module__rnk_JG__text {
+  color: #fff;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.Footer-module__rnk_JG__footer a {
+  color: #368a01;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.Footer-module__rnk_JG__footer a:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=components_Footer_Footer_module_css_f9ee138c._.single.css.map*/

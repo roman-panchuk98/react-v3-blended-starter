@@ -1,4 +1,4 @@
-.backdrop {
+.backdropModal {
   position: fixed;
   top: 0;
   left: 0;
@@ -13,7 +13,7 @@
 
 .modal {
   position: absolute;
-  top: 250px;
+  top: 150px;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 8px;

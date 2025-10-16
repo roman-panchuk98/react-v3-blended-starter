@@ -51,7 +51,7 @@
   /* background-color: #363638;*/
   z-index: 1001;
   background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(25px);
+  /* backdrop-filter: blur(25px); */
 }
 
 .menuItem {

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Post } from '@/types/post';
 import { deletePost } from '@/lib/api';
 import css from './PostList.module.css';
+import toast from 'react-hot-toast';
 
 interface PostListProps {
   posts: Post[];
@@ -17,7 +18,7 @@ export default function PostList({ posts, toggleModal, toggleEditPost }: PostLis
     mutationFn: deletePost,
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['posts'] });
-      alert('Post deleted successfully!');
+      toast.success('Post deleted successfully!');
     },
   });
 

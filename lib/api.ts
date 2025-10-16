@@ -43,8 +43,8 @@ export const createPost = async (newPost: NewPostContent) => {
   return response.data;
 };
 
-export const editPost = async (newDataPost: EditedPost) => {
-  const response = await axios.patch<Post>(`/posts/${newDataPost.id}`, newDataPost);
+export const editPost = async ({ id, title, body }: EditedPost) => {
+  const response = await axios.patch<Post>(`/posts/${id}`, { title, body });
   return response.data;
 };
 
@@ -54,7 +54,7 @@ export const deletePost = async (postId: number) => {
 };
 
 export const fetchPostById = async (postId: number): Promise<Post> => {
-  const response = await axios.get<Post>(`/post/${postId}`);
+  const response = await axios.get<Post>(`/posts/${postId}`);
   return response.data;
 };
 

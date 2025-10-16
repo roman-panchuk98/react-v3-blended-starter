@@ -16,7 +16,7 @@ import CreatePostForm from '@/components/CreatePostForm/CreatePostForm';
 
 interface PostsClientProps {
   initialData: { posts: Post[]; totalCount: number };
-  userId: string;
+  userId?: string;
 }
 
 export default function PostsClient({ initialData, userId }: PostsClientProps) {

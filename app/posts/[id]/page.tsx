@@ -8,7 +8,7 @@ interface PostDetailsProps {
   params: Promise<{ id: number }>;
 }
 
-export async function generateMetedata({ params }: PostDetailsProps): Promise<Metadata> {
+export async function generateMetadata({ params }: PostDetailsProps): Promise<Metadata> {
   const { id } = await params;
   const user = await fetchPostById(id);
 

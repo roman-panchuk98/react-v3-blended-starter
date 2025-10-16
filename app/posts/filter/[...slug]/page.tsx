@@ -7,7 +7,7 @@ interface PostsPageProps {
   params: Promise<{ slug: string[] }>;
 }
 
-export async function generateMetedata({ params }: PostsPageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: PostsPageProps): Promise<Metadata> {
   const { slug } = await params;
   const userId = slug[0] === 'All' ? undefined : slug[0];
   const response = await fetchPosts({ searchText: '', page: 1, userId: userId });
